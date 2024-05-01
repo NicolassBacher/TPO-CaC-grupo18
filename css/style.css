@@ -1,6 +1,48 @@
-:root {
+* {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 62.5%;
+}
+
+#paq {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.paq_box {
+  width: 30%;
+  background-color: red;
+  height: 200px;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 50%;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.paq_data {
+  width: 95%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.paq_linea {
+  width: 95%;
+}
+.paq_precio {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
