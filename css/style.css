@@ -7,15 +7,40 @@
 
 #paq {
   width: 100%;
-  height: 100vh;
   background-color: aqua;
+  position: absolute;
+}
+
+.paq_titulo {
+  width: 90%;
+  height: 35px;
+  margin: 30px 5% 15px 5%;
+  background-color: violet;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.paq_titulo h2 {
+  font-size: 2.5rem;
+}
+
+.paq_contenido {
+  width: 90%;
+  margin: 15px 5% 30px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .paq_box {
-  width: 30%;
+  width: 300px;
   background-color: red;
-  height: 200px;
-  border-radius: 0.8rem;
+  height: 400px;
+  margin: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +49,7 @@
 img {
   width: 100%;
   height: 50%;
-  border-radius: 0.8rem 0.8rem 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .paq_data {
@@ -36,6 +61,13 @@ img {
   justify-content: space-around;
 }
 
+.paq_data h3 {
+  font-size: 1.8rem;
+}
+.paq_data p {
+  font-size: 1.3rem;
+}
+
 .paq_linea {
   width: 95%;
 }
@@ -45,4 +77,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.paq_btn_info {
+  background-color: blue;
 }
