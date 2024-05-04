@@ -7,7 +7,7 @@
 
 #paq {
   width: 100%;
-  background-color: aqua;
+  background-color: whitesmoke;
   position: absolute;
 }
 
@@ -15,7 +15,7 @@
   width: 90%;
   height: 35px;
   margin: 30px 5% 15px 5%;
-  background-color: violet;
+  background-color: aqua;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -37,7 +37,7 @@
 
 .paq_box {
   width: 300px;
-  background-color: red;
+  background-color: aqua;
   height: 400px;
   margin: 5px;
   border-radius: 10px;
@@ -48,17 +48,21 @@
 
 img {
   width: 100%;
-  height: 50%;
+  height: 45%;
   border-radius: 10px 10px 0 0;
 }
 
 .paq_data {
   width: 95%;
-  height: 50%;
+  height: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+.paq_fecha {
+  color: #666;
+  width: 100%;
 }
 
 .paq_data h3 {
@@ -66,18 +70,27 @@ img {
 }
 .paq_data p {
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .paq_linea {
   width: 95%;
 }
 .paq_precio {
-  height: 15%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+.paq_precio h2 {
+  font-size: 1.5rem;
+}
 .paq_btn_info {
-  background-color: blue;
+  background-color: green;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
 }
