@@ -1,0 +1,79 @@
+{
+    "empresa": "viajesitus",
+    "direccion": "calle Falsa 123",
+    "telefono": "+5401156892345",
+    "viajes": {
+        "06/09/2024": {
+            "tiempo": "15 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "inicio": "09/06/2024",
+            "finaliza": "14/06/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo 1",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam ratione voluptate, eaque quas deleniti nam aspernatur dicta. Placeat, in?",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 33000
+        },
+        "03/10/2024": {
+            "tiempo": "1 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "inicio": "09/06/2024",
+            "finaliza": "14/06/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo 2",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing eli, in?",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 50500
+        },
+        "07/02/2025": {
+            "tiempo": "2 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "inicio": "09/07/2024",
+            "finaliza": "14/07/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo 3",
+            "descripcion": "Lorem ipsum dolor sit amet  eaque quas deleniti nam aspernatur dicta. Placeat, in?",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 45000
+        },
+        "09/08/2023": {
+            "tiempo": "15 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "inicio": "09/08/2024",
+            "finaliza": "14/08/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo 4",
+            "descripcion": "r adipisicing elit. Placeat totam ratione voluptate, eaque quas deleniti nam aspernatur dicta. Placeat, in?",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 30000
+        },
+        "05/08/2024": {
+            "tiempo": "3 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "inicio": "09/08/2024",
+            "finaliza": "14/08/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo 5",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 80000
+        },
+        "05/08/2024 01:00": {
+            "tiempo": "6 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "inicio": "09/08/2024",
+            "finaliza": "14/08/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo 20",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 85000
+        }
+    }
+}

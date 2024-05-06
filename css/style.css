@@ -73,6 +73,12 @@ img {
   text-align: center;
 }
 
+.paq_data p:not(.paq_fecha) {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
 .paq_linea {
   width: 95%;
 }
@@ -93,4 +99,8 @@ img {
   border: none;
   font-size: 1.5rem;
   color: white;
+}
+
+.none {
+  display: none;
 }
