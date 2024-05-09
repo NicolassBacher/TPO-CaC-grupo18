@@ -1,3 +1,4 @@
+/* fuente */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* variables */
@@ -39,14 +40,14 @@ header{
     z-index: 100;
 }
 header a{
-    color: var(--dark-gray);
+    color: var(--white);
     margin-right: 40px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
-/* carousel */
+/* slider */
 .hero{
     height: 100vh;
     margin-top: -50px;
@@ -115,7 +116,6 @@ header a{
 }
 
 .hero__items .item .buttons button:hover{
-    /* background-color: var(--orange); */
     border: 1px solid var(--orange);
     color: var(--orange);
     cursor: pointer;
@@ -156,7 +156,20 @@ header a{
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid var(--white);
+    transition: all .5s;
 }
+
+
+/* .hero__items .item:nth-child(1) .content .subtitle, */
+
+/* .hero__thumbnail .item img */
+
+/* .hero__thumbnail .item img:hover{
+    border: 1px solid var(--orange);
+    box-shadow: 0 5px 10px var(--orange);
+    cursor: pointer;
+    color: var(--orange);
+} */
 
 .hero__thumbnail .item .content{
     color: #fff;
@@ -164,6 +177,20 @@ header a{
     bottom: 10px;
     left: 10px;
     right: 10px;
+}
+
+.hero__thumbnail .item:hover{
+    border-radius: 20px;
+    border: 1px solid var(--orange);
+    box-shadow: 0 5px 10px var(--orange);
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.hero__thumbnail .item img:hover+.content,
+.hero__thumbnail .item .content:hover{
+     color: var(--orange);
+     cursor: pointer;
 }
 
 .hero__thumbnail .item .content .title{
@@ -174,6 +201,7 @@ header a{
     font-weight: 300;
 }
 
+/* botones flecha */
 .hero__arrows{
     position: absolute;
     top: 80%;
@@ -201,6 +229,32 @@ header a{
     background-color: var(--orange);
     color: var(--gray);
     cursor: pointer;    
+}
+
+/* animación */
+.hero__items .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animación texto en el primer item */
+
+.hero__items .item:nth-child(1) .content .subtitle,
+.hero__items .item:nth-child(1) .content .title,
+.hero__items .item:nth-child(1) .content .topic,
+.hero__items .item:nth-child(1) .content .description,
+.hero__items .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 
 
