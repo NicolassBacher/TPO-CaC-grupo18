@@ -35,6 +35,10 @@
   flex-wrap: wrap;
 }
 
+.paq_falla {
+  display: none;
+}
+
 .paq_box {
   width: 300px;
   background-color: aqua;

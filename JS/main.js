@@ -3,8 +3,7 @@
 
 const meses = document.querySelector('#mes')
 const paquetes = document.querySelectorAll('.paq_box')
-
-const paquete1 = document.querySelector('#lugar1')
+const noDisponible = document.querySelector('.paq_falla')
 
 
 const hoy = new Date()
@@ -13,23 +12,56 @@ const mesActual = new Date().getMonth() + 1
 const diaActual = new Date().getDate()
 let viajesVigentes = []
 let viajesProx6 = []
-let datos = {}
+let viajess = {}
+let mostrar = []
 
-//muestra u oculta los viajes en los meses seleccionados
-function filtroXmes(e) {
-    console.log(viajes)
-    let mes = e.target.value
-    paquetes.forEach((paquete) => {
-        if (paquete.classList[1] == mes) {
-            paquete.style.display = 'flex'
-        }
-        else {
-            paquete.style.display = 'none'
+
+function validador(data) {
+    viajesVigentes = []
+    Object.entries(data.viajes).forEach(([key, value]) => {
+        if (new Date(key) > hoy) {              //Filtrar tambien para que sea menores a un anio, osea, por ejemplo de mayo del 24 a abril de 25
+            viajesVigentes.push(key)
         }
     })
+    viajesVigentes.sort()
+    console.log(viajesVigentes)
 }
 
-function armado(armar) {
+function arrayFiltro(viajes) {
+    mostrar = []
+    if (mes.value == 'prox') {
+
+        mostrar = [viajesVigentes[0], viajesVigentes[1], viajesVigentes[2], viajesVigentes[3], viajesVigentes[4], viajesVigentes[5]]
+        console.log(mostrar, 'proximos viajes')
+    } else {
+        viajesVigentes.forEach((viajeVigente) => {
+            console.log(new Date(viajeVigente).getMonth() + 1, 'mes', mes.value)
+            if (new Date(viajeVigente).getMonth() + 1 == mes.value) {
+                console.log('entre')
+                mostrar.push(viajeVigente)
+
+            }
+        })
+        //if(viajesVigentes.getMonth())
+    } console.log(mostrar)
+
+}
+
+function apagarTodo() {
+    paquetes.forEach(paquete => paquete.style.display = 'none')
+}
+
+function armado(armar, datos) {
+    console.log(armar)
+    if (armar.length == 0 || datos == null) {
+        console.log('entre')
+        noDisponible.innerHTML = 'Lo sentimos, no disponemos de viajes para la fecha seleccionada, intente con otra fecha :)'
+        noDisponible.style.display = 'block'
+
+    }
+    else {
+        noDisponible.style.display = 'none'
+    }
     //console.log(armar)
     armar.forEach((fecha, i) => {
         if (datos.viajes[fecha] != undefined) {
@@ -41,52 +73,27 @@ function armado(armar) {
             paquetes[i].childNodes[3].childNodes[9].childNodes[1].innerHTML = "$" + datos.viajes[fecha].precio
             paquetes[i].style.display = 'flex'
         }
-        else {
-            console.log('no definido', datos.viajes[fecha])
-        }
-
     })
 }
 
-function proximos(dato) {
-    datos = dato
-    //console.log('asd', datos.viajes)
-    viajesVigentes = []
-    Object.entries(datos.viajes).forEach(([key, value]) => {
-        let comparar = new Date(key)
-        console.log(key, comparar)
-        if (comparar > hoy) {
-            //console.log('entre', comparar, hoy)
-            //hasta ca llegue, logre comparar las fechas descarta los anteriores al dia de hoy
-            //hay que filtrar a un anio y armar un nuevo objeto con el filtro de aca a un anio
-            // luego ordenar y tomar los primeros 6
 
-            viajesVigentes.push(key)
-
-
-        }
-        //else { console.log('no entre', comparar, hoy) } //borrar esta linea, no sirve el else
-
-
-    })
-    //console.log('antes', viajesVigentes)
-    viajesVigentes.sort()
-    //console.log('despues', viajesVigentes)
-    viajesProx6 = [viajesVigentes[0], viajesVigentes[1], viajesVigentes[2], viajesVigentes[3], viajesVigentes[4], viajesVigentes[5]]
-
-    paquetes.forEach((paquete) => {
-        paquete.style.display = 'none'
-    })
-    armado(viajesProx6)
+async function cargarJSON() {
+    try {
+        const response = await fetch(('../JSON/viajes.json'))
+        const viajes = await response.json()
+        viajess = viajes
+        validador(viajes)
+        //console.log('JSON', e.target.value)
+        arrayFiltro(viajes)
+        apagarTodo()
+        armado(mostrar, viajes)
+    }
+    catch (error) {
+        console.log('ERROR AL CARGAR API', error)
+        noDisponible.innerHTML = 'Lo sentimos, ha ocurrido un error al cargar los datos, vuelva a intentarlo mas tarde :)'
+        noDisponible.style.display = 'block'
+    }
 }
 
-
-
-fetch('../JSON/viajes.json')
-    .then(response => viajes = response.json())
-    .then(response => proximos(response))
-
-
-
-//evento de escucha de cambios en el filtor por mes
-meses.addEventListener('change', filtroXmes)
+meses.addEventListener('change', cargarJSON)
+cargarJSON()
