@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#exp{
+  margin: 50px auto;
+}
+
+#exp h3{
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tarjeta-exp{
+  margin: 50px;
+  display: flex;
+}
+
+.tarjeta{
+  width: 200px;
+  height: 250px;
+  margin-left: 250px;
+  background: #33ECFF;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .7s ease;
+  border-radius: 20px;  
+}
+
+.tarjeta-adelante, .tarjeta-atras{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.tarjeta-adelante{
+  width: 100% 
+}
+
+.img1{
+  background-image: url(/images/1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+.img2{
+  background-image: url(/images/2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+.img3{
+  background-image: url(/images/3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+.img4{
+  background-image: url(/images/4.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+.tarjeta-atras{
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.tarjeta:hover{
+  transform: rotateY(180deg);
+}
+
+.tarjeta-experiencia{
+  height: 250px;
+  width: 40%;
+  margin-left: 60px;
+  position: unset;
+  display: flex;
+  margin-top: 10px;
+  align-items: center ;
+}
+
+.tarjeta-atras p {
+  text-shadow: 2px 2px 2px rgba(0,0,0,3);
+}
