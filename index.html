@@ -19,12 +19,40 @@
 <body>
     <header>
         <!--Menú -->
-        <nav>
-            <a href="">Inicio</a>
-            <a href="">Paquetes</a>
-            <!-- <a href="">Experiencias</a>
-            <a href="">Contacto</a> -->
-        </nav>
+        <div class="header__logo">
+            <a href="index.html" class="link-logo">
+                <img class="logo" src="images/logo.png" alt="Logo">
+            </a>
+            <h2>CAC TURISMO</h2>
+        </div>
+        <button class="open-menu" id="open-menu"><i class="bi bi-list"></i></button>
+        <button class="close-menu disabled" id="close-menu"><i class="bi bi-x"></i></button> 
+        <div class="mobile-menu disabled" id="mobile-menu">
+            <!-- <div class="mobile-menu__header">
+                <div class="mobile-menu__logo">
+                    <img class="mobile-logo" src="images/logo.png" alt="Logo">
+                    <h2>CAC TURISMO</h2>
+                </div>
+            </div> -->
+            <nav class="mobile-menu__nav">
+                <ul>
+                    <li><a class="nav_link" href="index.html">Inicio</a></li>
+                    <li><a class="nav_link" href="#paquetes">Paquetes</a></li>
+                    <li><a class="nav_link" href="#experiencias">Experiencias</a></li>
+                    <li><a class="nav_link" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="desktop-menu">
+            <nav class="desktop-menu__nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#paquetes">Paquetes</a></li>
+                    <li><a href="#experiencias">Experiencias</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <!--slider hero -->
@@ -134,10 +162,23 @@
                 <button id="next">></button>
             </div>
             <!-- timer -->
-            <div class="hero__timer"></div>
+            <div class="hero__timeer"></div>
+        </section>
+
+        <section id="paquetes" class="paquetes">
+
+        </section>
+
+        <section id="experiencias" class="experiencias">
+
+        </section>
+
+        <section id="contacto" class="contacto">
+
         </section>
 
     </main>
+    <script src="js/menu.js"></script>
     <script src="js/slider.js"></script>
 </body>
 </html>
