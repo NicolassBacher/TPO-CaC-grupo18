@@ -1,36 +1,38 @@
 {
-    "empresa": "viajesitus",
+    "empresa": "CAC TURISMO",
     "direccion": "calle Falsa 123",
     "telefono": "+5401156892345",
     "viajes": {
-        "06/09/2024": {
-            "tiempo": "15 días - 7 noches | Dom 26/05 a Dom 02/06",
-            "inicio": "09/06/2024",
-            "finaliza": "14/06/2024",
-            "dias": 6,
-            "noches": 4,
-            "titulo": "titulo 1",
-            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam ratione voluptate, eaque quas deleniti nam aspernatur dicta. Placeat, in?",
-            "img": "./images/foto-chalten-marzo-web-1.jpg",
-            "alt": "descripcion imagen",
+        "00": {
+            "titulo": "Cataratas del Iguazú",
+            "salida": "06/09/2024",
+            "regreso": "06/13/2024",
+            "dias": "5",
+            "noches": "2",
+            "transporte": "Bus Semicama",
+            "descripcion": "Una de las Siete Maravillas Naturales del Mundo, los saltos de agua más impactantes del planeta dentro de la selva misionera.",
+            "img": "./images/cataratas-del-iguazu.jpg",
+            "alt": "Cataratas del Iguazú",
             "precio": 33000
         },
-        "03/10/2024": {
+        "01": {
             "tiempo": "1 días - 7 noches | Dom 26/05 a Dom 02/06",
-            "inicio": "09/06/2024",
-            "finaliza": "14/06/2024",
+            "salida": "03/10/2024",
+            "regreso": "14/06/2024",
             "dias": 6,
             "noches": 4,
             "titulo": "titulo 2",
+            "transporte": "avion",
             "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing eli, in?",
             "img": "./images/foto-chalten-marzo-web-1.jpg",
             "alt": "descripcion imagen",
             "precio": 50500
         },
-        "07/02/2025": {
+        "02": {
             "tiempo": "2 días - 7 noches | Dom 26/05 a Dom 02/06",
-            "inicio": "09/07/2024",
-            "finaliza": "14/07/2024",
+            "salida": "07/02/2025",
+            "transporte": "Bus Semicama",
+            "regreso": "14/07/2024",
             "dias": 6,
             "noches": 4,
             "titulo": "titulo 3",
@@ -39,41 +41,70 @@
             "alt": "descripcion imagen",
             "precio": 45000
         },
-        "09/08/2023": {
+        "03": {
             "tiempo": "15 días - 7 noches | Dom 26/05 a Dom 02/06",
-            "inicio": "09/08/2024",
-            "finaliza": "14/08/2024",
+            "salida": "09/08/2023",
+            "regreso": "14/08/2024",
             "dias": 6,
             "noches": 4,
             "titulo": "titulo 4",
+            "transporte": "avion",
             "descripcion": "r adipisicing elit. Placeat totam ratione voluptate, eaque quas deleniti nam aspernatur dicta. Placeat, in?",
             "img": "./images/foto-chalten-marzo-web-1.jpg",
             "alt": "descripcion imagen",
             "precio": 30000
         },
-        "10/08/2024": {
+        "04": {
             "tiempo": "3 días - 7 noches | Dom 26/05 a Dom 02/06",
-            "inicio": "09/08/2024",
-            "finaliza": "14/08/2024",
+            "salida": "10/08/2024",
+            "regreso": "14/08/2024",
             "dias": 6,
             "noches": 4,
             "titulo": "titulo 5",
+            "transporte": "Bus Semicama",
             "descripcion": "Lorem ipsum dolor sit amet consectetur",
             "img": "./images/foto-chalten-marzo-web-1.jpg",
             "alt": "descripcion imagen",
             "precio": 80000
         },
-        "10/08/2024 01:00": {
+        "05": {
             "tiempo": "6 días - 7 noches | Dom 26/05 a Dom 02/06",
-            "inicio": "09/08/2024",
-            "finaliza": "14/08/2024",
+            "salida": "10/08/2024",
+            "regreso": "14/08/2024",
             "dias": 6,
             "noches": 4,
             "titulo": "titulo 20",
+            "transporte": "Avion",
             "descripcion": "Lorem ipsum dolor sit amet consectetur",
             "img": "./images/foto-chalten-marzo-web-1.jpg",
             "alt": "descripcion imagen",
             "precio": 85000
+        },
+        "06": {
+            "tiempo": "6 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "salida": "10/08/2027",
+            "regreso": "14/08/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "27",
+            "transporte": "Bus Semicama",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 85000
+        },
+        "07": {
+            "tiempo": "2 días - 7 noches | Dom 26/05 a Dom 02/06",
+            "salida": "04/02/2025",
+            "regreso": "14/07/2024",
+            "dias": 6,
+            "noches": 4,
+            "titulo": "titulo asd",
+            "transporte": "Bus Semicama",
+            "descripcion": "Lorem ipsum dolor sit amet  eaque quas deleniti nam aspernatur dicta. Placeat, in?",
+            "img": "./images/foto-chalten-marzo-web-1.jpg",
+            "alt": "descripcion imagen",
+            "precio": 45000
         }
     }
 }

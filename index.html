@@ -16,190 +16,43 @@
         <h3>portada</h3>
       </section>
       <section id="paq">
-        <div class="paq_titulo"><h2>Paquetes</h2></div>
+        <div class="paq_titulo">
+          <h2>Paquetes</h2>
+        </div>
+        <div class="paq_selec">
+          <h3>Mostrar salidas en:</h3>
+          <select name="meses" id="mes">
+            <option selected value="prox">Proximos Viajes...</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+          </select>
+        </div>
 
-        <!-- AGREGA UNA LISTA DESPLEGABLE PARA SELECCIONAR EL MES, EL JS SE ENCARGA DE ESCUCHAR Y FILTRAR POR MES
-        SE DEJA COMENTADO YA QUE PRIMERO HAY QUE HACER OTRAS MODIFICACIONES
-      EN CASO DE LLEGAR DESCOMENTAR Y CONTINUAR EL DESARROLLO -->
-
-        <select name="meses" id="mes">
-          <option selected value="prox">Proximos...</option>
-          <option value="1">Enero</option>
-          <option value="2">Febrero</option>
-          <option value="3">Marzo</option>
-          <option value="4">Abril</option>
-          <option value="5">Mayo</option>
-          <option value="6">Junio</option>
-          <option value="7">Julio</option>
-          <option value="8">Agosto</option>
-          <option value="9">Septiembre</option>
-          <option value="10">Octubre</option>
-          <option value="11">Noviembre</option>
-          <option value="12">Diciembre</option>
-        </select>
         <div class="paq_contenido">
-          <h3 class="paq_falla"></h3>
-          <!-- <div class="paq_box enero">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-          <div class="paq_box febrero">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-          <div class="paq_box febrero">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- PUERBA -->
-          <div class="paq_box">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="paq_box">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-          <div class="paq_box">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="paq_box">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="paq_box">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="paq_box">
-            <img src="./images/foto-chalten-marzo-web-1.jpg" alt="viaje" />
-            <div class="paq_data">
-              <h3>titulo</h3>
-              <p class="paq_fecha">8 días - 7 noches | Dom 26/05 a Dom 02/06</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                totam ratione voluptate, eaque quas deleniti nam aspernatur
-                dicta. Placeat, in?
-              </p>
-              <hr class="paq_linea" />
-              <div class="paq_precio">
-                <h2>$500000</h2>
-                <button class="paq_btn_info">+ info</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- FIN PRUEBA -->
+          <!-- <div class="paq_box">
+            <img src="" alt=""/>
+                <div class="paq_data">
+                    <h3></h3>
+                    <p class="paq_fecha"></p>
+                    <p class="paq_fecha"><i class="fa-thin fa-plane-arrival"></i></p>
+                    <p class="paq_descripcion"></p>
+                    <hr class="paq_linea" />
+                    <div class="paq_precio">
+                        <h2></h2>
+                        <button class="paq_btn_info">+ info</button>
+                    </div>
+                </div>
+            </div > -->
         </div>
       </section>
       <section id="prop">
