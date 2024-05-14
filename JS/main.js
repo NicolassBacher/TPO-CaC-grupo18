@@ -105,7 +105,7 @@ function armado(armar, datos) {
         })
     }
 }
-
+console.log('cambie')
 async function cargarJSON() {
     try {
         const response = await fetch("./JSON/viajes.json")
