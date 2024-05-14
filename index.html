@@ -28,12 +28,6 @@
         <button class="open-menu" id="open-menu"><i class="bi bi-list"></i></button>
         <button class="close-menu disabled" id="close-menu"><i class="bi bi-x"></i></button> 
         <div class="mobile-menu disabled" id="mobile-menu">
-            <!-- <div class="mobile-menu__header">
-                <div class="mobile-menu__logo">
-                    <img class="mobile-logo" src="images/logo.png" alt="Logo">
-                    <h2>CAC TURISMO</h2>
-                </div>
-            </div> -->
             <nav class="mobile-menu__nav">
                 <ul>
                     <li><a class="nav_link" href="index.html">Inicio</a></li>
@@ -59,13 +53,13 @@
         <section id="hero" class="hero">
             <!--items -->
             <div class="hero__items">
-                <div class="item">
+                <div class="item active">
                     <img src="images/slider1.jpg">
                     <div class="content">
                         <!-- Títulos -->
                         <h4 class="subtitle">AGENCIA DE VIAJES</h4>
                         <h2 class="title">CAC TURISMO</h2>
-                        <h3 class="topic">PAQUETE</h3>
+                        <h3 class="topic">PAQUETE1</h3>
                         <p class="description">
                             <!-- Texto descriptivo -->
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
@@ -127,28 +121,28 @@
             </div>
             <!-- miniaturas -->
             <div class="hero__thumbnail">
-                <div class="item" id="item1">
+                <div class="item active">
                     <img src="images/slider1.jpg">
                     <div class="content">
                         <h4 class="title">Paquete 1</h4>
                         <p class="description">Descripción</p>
                     </div>
                 </div>
-                <div class="item" id="item2">
+                <div class="item">
                     <img src="images/slider2.jpg">
                     <div class="content">
                         <h4 class="title">Paquete 2</h4>
                         <p class="description">Descripción</p>
                     </div>
                 </div>
-                <div class="item" id="item3">
+                <div class="item">
                     <img src="images/slider3.jpg">
                     <div class="content">
                         <h4 class="title">Paquete 3</h4>
                         <p class="description">Descripción</p>
                     </div>
                 </div>
-                <div class="item" id="item4">
+                <div class="item">
                     <img src="images/slider4.jpg">
                     <div class="content">
                         <h4 class="title">Paquete 4</h4>
@@ -161,24 +155,57 @@
                 <button id="prev"><</button>
                 <button id="next">></button>
             </div>
-            <!-- timer -->
-            <div class="hero__timeer"></div>
         </section>
 
-        <section id="paquetes" class="paquetes">
+        <section class="contacto" id="contacto">
+            <h3 class="contacto__titulo">Contacto</h3>
+            <div class="contacto__content">
+                <div class="contacto__form">
+                    <form id="form" >
+                        <p class="block">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </p>
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" >
+                        </p>
+                        <p>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" >
+                        </p>
+                        <p class="block">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" ></textarea>
+                        </p>
+                        <p class="contacto__respuesta block" id="respuesta">
+                            <!-- ALERTA DE MENSAJES -->
+                        </p>
+                        <p class="block">
+                            <input class="btn" type="submit" value="Enviar">
+                        </p>
+                    </form>
+                </div>
 
+                <div class="contacto__info">
+                    <h3 class="contacto__titulo">Información</h3>
+                    <ul>
+                        <li><i class="bi bi-geo-alt-fill"></i> Costanera 1234, CABA.</li>
+                        <li><i class="bi bi-envelope-fill"></i> info@cacturismo.com</li>
+                        <li><i class="bi bi-telephone-fill"></i> (011) 4999-9999</li>
+                        <li><i class="bi bi-whatsapp"></i> (11) 4999-9998 (solo mensajes).</li>
+                    </ul>                    
+                </div>
+            </div>
+            <div class="contacto__mapa">
+                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=buenos%20aires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
         </section>
-
-        <section id="experiencias" class="experiencias">
-
-        </section>
-
-        <section id="contacto" class="contacto">
 
         </section>
 
     </main>
-    <script src="js/menu.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
