@@ -88,16 +88,16 @@ function armado(armar, datos) {
 
                 let transporte = (a) => {
                     if (a.toLowerCase() == 'aéreo' || a.toLowerCase() == 'aereo') {
-                        return '<img src="../images/avion.png" alt="avion"/>'
+                        return '<img src="./images/avion.png" alt="avion"/>'
                     } else {
-                        return '<img src="../images/autobus.png" alt="avion"/>'
+                        return '<img src="./images/autobus.png" alt="avion"/>'
                     }
 
                 }
                 paq[1].src = dato.img
                 paq[1].alt = dato.alt
                 paq[3].childNodes[1].innerHTML = dato.titulo
-                paq[3].childNodes[3].innerHTML = '<img src="../images/calendario.png" alt="calendario"/>' + ' &nbsp' + tiempoDeViaje
+                paq[3].childNodes[3].innerHTML = '<img src="./images/calendario.png" alt="calendario"/>' + ' &nbsp' + tiempoDeViaje
                 paq[3].childNodes[5].innerHTML = transporte(dato.transporte) + ' &nbsp ' + dato.transporte
                 paq[3].childNodes[7].innerHTML = dato.descripcion
                 paq[3].childNodes[11].childNodes[1].innerHTML = "$" + dato.precio
@@ -108,7 +108,7 @@ function armado(armar, datos) {
 
 async function cargarJSON() {
     try {
-        const response = await fetch("../JSON/viajes.json")
+        const response = await fetch("./JSON/viajes.json")
         const viajes = await response.json()
         viajess = viajes
         validador(viajes)
