@@ -164,3 +164,54 @@ body {
 .paq_btn_info:hover {
   background-color: rgb(24, 192, 24);
 }
+@media screen and (max-width: 650px) {
+  .paq_data h3 {
+    font-size: 2rem;
+  }
+  .paq_data p {
+    font-size: 1.4rem;
+  }
+  .paq_btn_info {
+    background-color: green;
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .paq_contenido {
+    margin: 10px 2px 15px 2px;
+    width: 100%;
+  }
+
+  .paq_box {
+    width: 90%;
+    min-width: 450px;
+    height: 250px;
+    flex-direction: row;
+    margin: 10px 5px 10px 5px;
+  }
+  .paq_portada {
+    height: 100%;
+    width: 45%;
+    min-width: 280px;
+    border-radius: 10px 0 0 10px;
+  }
+  .paq_data {
+    width: 55%;
+    height: 100%;
+    margin: 5px 3px 5px 3px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .paq_data h3 {
+    font-size: 2rem;
+  }
+  .paq_data p {
+    font-size: 1.4rem;
+  }
+}
