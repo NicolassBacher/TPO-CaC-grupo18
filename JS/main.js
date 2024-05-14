@@ -108,7 +108,7 @@ function armado(armar, datos) {
 
 async function cargarJSON() {
     try {
-        const response = await fetch(('../JSON/viajes.json'))
+        const response = await fetch("../JSON/viajes.json")
         const viajes = await response.json()
         viajess = viajes
         validador(viajes)
