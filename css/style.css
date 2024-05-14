@@ -164,7 +164,7 @@ body {
 .paq_btn_info:hover {
   background-color: rgb(24, 192, 24);
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
   .paq_data h3 {
     font-size: 2rem;
   }
@@ -179,9 +179,18 @@ body {
     border: none;
     font-size: 1.4rem;
   }
+  .paq_box {
+    width: 300px;
+    background-color: var(--principal);
+    height: 450px;
+    margin: 10px 8px 10px 8px;
+  }
+  .paq_contenido {
+    width: 95%;
+  }
 }
 
-@media screen and (max-width: 800px) and (orientation: landscape) {
+@media screen and (max-width: 850px) and (orientation: landscape) and (max-height: 600px) {
   .paq_contenido {
     margin: 10px 2px 15px 2px;
     width: 100%;
