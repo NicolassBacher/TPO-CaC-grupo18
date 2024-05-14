@@ -3,7 +3,7 @@ const contenido = document.querySelector('.paq_contenido')
 
 const hoy = new Date()
 const anioActual = new Date().getFullYear()
-const mesActual = new Date().getMonth() + 1
+const mesActual = new Date().getMonth()
 const diaActual = new Date().getDate()
 let viajesVigentes = []
 let viajess = {}
@@ -21,28 +21,32 @@ let semana = {
 function validador(data) {
     viajesVigentes = []
     Object.entries(data.viajes).forEach(([key, value]) => {
+
         let salida = new Date(value.salida)
-        if (salida > hoy && (salida.getFullYear() == anioActual || (salida.getFullYear() == anioActual + 1 && salida.getMonth() <= mesActual))) {
-            viajesVigentes.push(key)
+        if (salida > hoy && ((salida.getFullYear() == anioActual) || ((salida.getFullYear() == anioActual + 1) && (salida.getMonth() < mesActual)))) {
+            viajesVigentes.push({
+                'id': key,
+                'fecha': value.salida
+            })
         }
     })
-    viajesVigentes.sort()
+    viajesVigentes.sort((a, b) => new Date(a.fecha).getTime() - new Date(b.fecha).getTime())
+    console.log(viajesVigentes)
 }
 
 function arrayFiltro(viajes) {
     mostrar = []
     if (mes.value == 'prox') {
-        mostrar = [viajesVigentes[0], viajesVigentes[1], viajesVigentes[2], viajesVigentes[3], viajesVigentes[4], viajesVigentes[5], viajesVigentes[6], viajesVigentes[7]]
+        mostrar = [viajesVigentes[0].id, viajesVigentes[1].id, viajesVigentes[2].id, viajesVigentes[3].id, viajesVigentes[4].id, viajesVigentes[5].id]
         mostrar.forEach((fecha, i) => {
-            console.log(mostrar, i)
             if (fecha == undefined) {
                 mostrar.splice(i)
             }
         })
     } else {
         viajesVigentes.forEach((viajeVigente) => {
-            if (new Date(viajes.viajes[viajeVigente].salida).getMonth() + 1 == mes.value) {
-                mostrar.push(viajeVigente)
+            if (new Date(viajes.viajes[viajeVigente.id].salida).getMonth() + 1 == mes.value) {
+                mostrar.push(viajeVigente.id)
             }
         })
     }
@@ -64,7 +68,7 @@ function armado(armar, datos) {
                 <hr class="paq_linea" />
                 <div class="paq_precio">
                     <h2></h2>
-                    <button class="paq_btn_info">+ info</button>
+                    <a href="#cont"><button class="paq_btn_info">+ info</button></a>
                 </div>
             </div>
         </div > `
@@ -79,11 +83,11 @@ function armado(armar, datos) {
                 let paq = paquetes[i].childNodes
                 let salida = new Date(dato.salida)
                 let regreso = new Date(dato.regreso)
-                let tiempoDeViaje = ` ${dato.dias} dias ${dato.noches} noches | ${semana[salida.getDay()]} ${salida.getDate()}/${regreso.getMonth() + 1
-                    } al ${semana[regreso.getDay()]} ${regreso.getDate()} /${regreso.getMonth() + 1}`
+                let tiempoDeViaje = ` ${dato.dias} dias ${dato.noches} noches <br>  &nbsp ${semana[salida.getDay()]} ${salida.getDate()}/${salida.getMonth() + 1
+                    }/${salida.getFullYear()} al ${semana[regreso.getDay()]} ${regreso.getDate()}/${regreso.getMonth() + 1}/${regreso.getFullYear()}`
 
                 let transporte = (a) => {
-                    if (a.toLowerCase() == 'avion') {
+                    if (a.toLowerCase() == 'aéreo' || a.toLowerCase() == 'aereo') {
                         return '<img src="../images/avion.png" alt="avion"/>'
                     } else {
                         return '<img src="../images/autobus.png" alt="avion"/>'
@@ -101,7 +105,6 @@ function armado(armar, datos) {
         })
     }
 }
-
 
 async function cargarJSON() {
     try {

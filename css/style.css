@@ -1,8 +1,16 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 62.5%;
+}
+
+:root {
+  --principal: #fad156;
+  --text: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--text);
 }
 
 #paq {
@@ -17,7 +25,7 @@
   width: 90%;
   height: 35px;
   margin: 30px 0 15px 0;
-  background-color: aqua;
+  background-color: var(--principal);
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -30,8 +38,7 @@
 .paq_selec {
   width: 300px;
   height: 35px;
-  margin: 30px 5% 15px 5%;
-  background-color: aqua;
+  background-color: var(--principal);
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -46,14 +53,14 @@
 }
 .paq_selec select {
   border: none;
-  background-color: aqua;
+  background-color: var(--principal);
   font-size: 1.5rem;
   border-radius: 0px 20px 20px 0px;
   padding: 2px;
   border-right: 8px solid transparent;
 }
 .paq_selec select:hover {
-  background-color: aquamarine;
+  background-color: #ffe8a4;
 }
 
 .paq_selec select option {
@@ -62,6 +69,7 @@
 
 .paq_contenido {
   width: 90%;
+  min-height: 510px;
   margin: 15px 5% 30px 5%;
   display: flex;
   align-items: center;
@@ -70,14 +78,19 @@
 }
 
 .paq_falla {
-  display: block;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .paq_box {
   width: 350px;
-  background-color: aqua;
+  background-color: var(--principal);
   height: 500px;
-  margin: 5px;
+  margin: 15px 10px 15px 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -148,7 +161,6 @@
   font-size: 1.5rem;
   color: white;
 }
-
-.none {
-  display: none;
+.paq_btn_info:hover {
+  background-color: rgb(24, 192, 24);
 }
