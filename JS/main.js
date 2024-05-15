@@ -108,7 +108,7 @@ function armado(armar, datos) {
 console.log('cambie')
 async function cargarJSON() {
     try {
-        const response = await fetch("https://raw.githubusercontent.com/NicolassBacher/TPO-CaC-grupo18/seccionPaquetes/JSON/viajes.json")
+        const response = await fetch("https://raw.githubusercontent.com/NicolassBacher/TPO-CaC-grupo18/main/JSON/viajes.json")
         const viajes = await response.json()
         viajess = viajes
         validador(viajes)
