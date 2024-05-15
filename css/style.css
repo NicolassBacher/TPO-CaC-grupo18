@@ -162,10 +162,10 @@ body {
 }
 @media screen and (max-width: 850px) {
   .paq_data h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
   .paq_data p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .paq_btn_info {
     background-color: green;
@@ -173,7 +173,7 @@ body {
     height: 35px;
     border-radius: 20px;
     border: none;
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
   .paq_box {
     width: 300px;
@@ -251,12 +251,13 @@ body {
 .tarjeta-exp {
   margin: 50px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .tarjeta {
   width: 200px;
   height: 250px;
-  margin-left: 250px;
   background: var(--principal);
   position: relative;
   transform-style: preserve-3d;
@@ -324,8 +325,7 @@ body {
 
 .tarjeta-experiencia {
   height: 250px;
-  width: 40%;
-  margin-left: 60px;
+  width: 50%;
   position: unset;
   display: flex;
   margin-top: 10px;
@@ -336,11 +336,24 @@ body {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 3);
 }
 
+@media screen and (max-width: 550px) {
+  .tarjeta-exp {
+    margin: 50px 10px 50px 10px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .tarjeta-experiencia {
+    height: auto;
+    width: 95%;
+  }
+}
+
 /* Footer */
 
 #footer {
   width: 100%;
-  height: 130px;
+  min-height: 130px;
   background: var(--principal);
   display: block;
   justify-content: center;
