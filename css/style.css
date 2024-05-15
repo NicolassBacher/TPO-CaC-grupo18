@@ -199,6 +199,9 @@ body {
   .paq_selec select option {
     font-size: 0.9rem;
   }
+  .paq_falla {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 850px) and (orientation: landscape) and (max-height: 600px) {
