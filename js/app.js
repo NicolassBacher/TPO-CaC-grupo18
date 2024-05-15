@@ -1,3 +1,60 @@
+//MENU RESPONSIVE
+let btnOpenMenu = document.querySelector("#open-menu");
+let btnCloseMenu = document.querySelector("#close-menu");
+let menuMobile = document.querySelector("#mobile-menu");
+let links = document.querySelectorAll(".nav_link");
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+enableScroll()
+
+btnOpenMenu.addEventListener("click", () => {
+    menuMobile.classList.remove("disabled")
+    btnCloseMenu.classList.remove("disabled")
+    btnOpenMenu.classList.add("disabled")
+    disableScroll();
+})
+
+btnCloseMenu.addEventListener("click", () => {
+    menuMobile.classList.add("disabled")
+    btnCloseMenu.classList.add("disabled")
+    btnOpenMenu.classList.remove("disabled")
+    enableScroll()
+})
+
+links.forEach(link => link.addEventListener("click", () => {  
+    menuMobile.classList.add("disabled")
+    btnCloseMenu.classList.add("disabled")
+    btnOpenMenu.classList.remove("disabled")
+    enableScroll()
+}))
+
+// Para habilitar el scroll nuevamente
+function enableScroll() {
+    if (isMobile) {
+      document.removeEventListener('touchmove', touchMoveHandler);
+    }
+  }
+  
+  // Para deshabilitar el scroll si es mobile
+  function disableScroll() {
+    if (isMobile) {
+      document.addEventListener('touchmove', touchMoveHandler, { passive: false });
+    }
+  }
+  
+  // Controlador de eventos para prevenir el scroll en dispositivos mÃ³viles
+  function touchMoveHandler(event) {
+    event.preventDefault();
+  }
+//FIN MENU RESPONSIVE
+
+//PAQUETES botones ver más
+//en etapa backend el botón RESERVAR se vinculará con app
+function goPaq() {
+    window.location.assign("#paquetes")
+  }
+//FIN PAQUETES
+
 //SLIDER
 
 let items = document.querySelectorAll('.hero__items .item');
@@ -5,7 +62,7 @@ let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.hero__thumbnail .item');
 
-// config param
+// parámetros
 let countItem = items.length;
 let itemActive = 0;
 
@@ -56,58 +113,3 @@ thumbnails.forEach((thumbnail, index) => {
 })
 
 //FIN SLIDER
-
-//MENU RESPONSIVE
-let btnOpenMenu = document.querySelector("#open-menu");
-let btnCloseMenu = document.querySelector("#close-menu");
-let menuMobile = document.querySelector("#mobile-menu");
-let links = document.querySelectorAll(".nav_link");
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-enableScroll()
-
-btnOpenMenu.addEventListener("click", () => {
-    menuMobile.classList.remove("disabled")
-    btnCloseMenu.classList.remove("disabled")
-    btnOpenMenu.classList.add("disabled")
-    // showSlider('none'); 
-    disableScroll();
-})
-
-btnCloseMenu.addEventListener("click", () => {
-    menuMobile.classList.add("disabled")
-    btnCloseMenu.classList.add("disabled")
-    btnOpenMenu.classList.remove("disabled")
-    // timeAutoNext = 8000;
-    // showSlider('next'); 
-    enableScroll()
-})
-
-links.forEach(link => link.addEventListener("click", () => {  
-    menuMobile.classList.add("disabled")
-    btnCloseMenu.classList.add("disabled")
-    btnOpenMenu.classList.remove("disabled")
-    // timeAutoNext = 8000;
-    // showSlider('next'); 
-    enableScroll()
-}))
-
-// Para habilitar el scroll nuevamente
-function enableScroll() {
-    if (isMobile) {
-      document.removeEventListener('touchmove', touchMoveHandler);
-    }
-  }
-  
-  // Para deshabilitar el scroll si es mobile
-  function disableScroll() {
-    if (isMobile) {
-      document.addEventListener('touchmove', touchMoveHandler, { passive: false });
-    }
-  }
-  
-  // Controlador de eventos para prevenir el scroll en dispositivos mÃ³viles
-  function touchMoveHandler(event) {
-    event.preventDefault();
-  }
-//FIN MENU RESPONSIVE
