@@ -1,21 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Agencia de Viajes</title>
-  </head>
-
-  <body>
-    <header id="header">
-      <h3>Header</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Agencia de Viajes CAC TURISMO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="agencia de viajes, turismo, paseos, argentina">
+    <meta name="author" content="Grupo 18 CaC Node JS">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Agencia de Viajes - CAC TURISMO</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--normaliza css -->
+    <link rel="stylesheet"href='css/normalize.css'>
+    <!--Iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <!--Menú -->
+        <div class="header__logo">
+            <a href="index.html" class="link-logo">
+                <img class="logo" src="images/logo.png" alt="Logo">
+            </a>
+            <h2>CAC TURISMO</h2>
+        </div>
+        <button class="open-menu" id="open-menu"><i class="bi bi-list"></i></button>
+        <button class="close-menu disabled" id="close-menu"><i class="bi bi-x"></i></button> 
+        <div class="mobile-menu disabled" id="mobile-menu">
+            <nav class="mobile-menu__nav">
+                <ul>
+                    <li><a class="nav_link" href="index.html">Inicio</a></li>
+                    <li><a class="nav_link" href="#paq">Paquetes</a></li>
+                    <li><a class="nav_link" href="#experiencias">Experiencias</a></li>
+                    <li><a class="nav_link" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="desktop-menu">
+            <nav class="desktop-menu__nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#paq">Paquetes</a></li>
+                    <li><a href="#experiencias">Experiencias</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-      <section id="port">
-        <h3>portada</h3>
-      </section>
-      <section id="paq">
+        <!--slider hero -->
+        <section id="hero" class="hero">
+            <!--items -->
+            <div class="hero__items">
+                <div class="item active">
+                    <img src="images/slider1.jpg">
+                    <div class="content">
+                        <!-- Títulos -->
+                        <h4 class="subtitle">AGENCIA DE VIAJES</h4>
+                        <h2 class="title">CAC TURISMO</h2>
+                        <h3 class="topic">Cataratas del Iguazú</h3>
+                        <p class="description">
+                            <!-- Texto descriptivo -->
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                        </p>
+                        <div class="buttons">
+                            <button onclick="goPaq()">VER MÁS</button>
+                            <button onclick="goPaq()">RESERVAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/slider2.jpg">
+                    <div class="content">
+                        <!-- Títulos -->
+                        <h4 class="subtitle">AGENCIA DE VIAJES</h4>
+                        <h2 class="title">CAC TURISMO</h2>
+                        <h3 class="topic">Norte Argentino</h3>
+                        <p class="description">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                        </p>
+                        <div class="buttons">
+                            <button onclick="goPaq()">VER MÁS</button>
+                            <button onclick="goPaq()">RESERVAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/slider3.jpg">
+                    <div class="content">
+                        <!-- Títulos -->
+                        <h4 class="subtitle">AGENCIA DE VIAJES</h4>
+                        <h2 class="title">CAC TURISMO</h2>
+                        <h3 class="topic">Esquel</h3>
+                        <p class="description">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                        </p>
+                        <div class="buttons">
+                            <button onclick="goPaq()">VER MÁS</button>
+                            <button onclick="goPaq()">RESERVAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/slider4.jpg">
+                    <div class="content">
+                        <!-- Títulos -->
+                        <h4 class="subtitle">AGENCIA DE VIAJES</h4>
+                        <h2 class="title">CAC TURISMO</h2>
+                        <h3 class="topic">San Rafael</h3>
+                        <p class="description">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                        </p>
+                        <div class="buttons">
+                            <button onclick="goPaq()">VER MÁS</button>
+                            <button onclick="goPaq()">RESERVAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- miniaturas -->
+            <div class="hero__thumbnail">
+                <div class="item active">
+                    <img src="images/slider1.jpg">
+                    <div class="content">
+                        <h4 class="title">Cataratas del Iguazú</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/slider2.jpg">
+                    <div class="content">
+                        <h4 class="title">Norte Argentino</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/slider3.jpg">
+                    <div class="content">
+                        <h4 class="title">Esquel</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/slider4.jpg">
+                    <div class="content">
+                        <h4 class="title">San Rafael</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- botones next prev -->
+            <div class="hero__arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </section>
+<section id="paq">
         <div class="paq_titulo">
           <h2>Paquetes</h2>
         </div>
@@ -54,19 +191,54 @@
         </div >  -->
         </div>
       </section>
-      <section id="prop">
-        <h3>nuestra propuesta</h3>
-      </section>
-      <section id="exp">
-        <h3>experiencia de los viajeros</h3>
-      </section>
-      <section id="cont">
-        <h3>contacto</h3>
-      </section>
+        <section class="contacto" id="contacto">
+            <h3 class="contacto__titulo">Contacto</h3>
+            <div class="contacto__content">
+                <div class="contacto__form">
+                    <form id="form" >
+                        <p class="block">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </p>
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" >
+                        </p>
+                        <p>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" >
+                        </p>
+                        <p class="block">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" ></textarea>
+                        </p>
+                        <p class="contacto__respuesta block" id="respuesta">
+                            <!-- ALERTA DE MENSAJES -->
+                        </p>
+                        <p class="block">
+                            <input class="btn" type="submit" value="Enviar">
+                        </p>
+                    </form>
+                </div>
+                <div class="contacto__info">
+                    <h3 class="contacto__titulo">Información</h3>
+                    <ul>
+                        <li><i class="bi bi-geo-alt-fill"></i> Costanera 1234, CABA.</li>
+                        <li><i class="bi bi-envelope-fill"></i> info@cacturismo.com</li>
+                        <li><i class="bi bi-telephone-fill"></i> (011) 4999-9999</li>
+                        <li><i class="bi bi-whatsapp"></i> (11) 4999-9998 (solo mensajes).</li>
+                    </ul>                    
+                </div>
+            </div>
+            <div class="contacto__mapa">
+                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=buenos%20aires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </section>
+
+        </section>
+
     </main>
-    <footer id="footer">
-      <h3>footer</h3>
-    </footer>
-    <script src="./js/main.js"></script>
-  </body>
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
+</body>
 </html>
