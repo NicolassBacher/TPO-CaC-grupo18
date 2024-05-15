@@ -71,7 +71,7 @@ function armado(armar, datos) {
                     <a href="#contacto"><button class="paq_btn_info">+ info</button></a>
                 </div>
             </div>
-        </div > `
+        </div >`
         for (var i = 0; i < armar.length; i++) {
             contenido.innerHTML += box
         }
