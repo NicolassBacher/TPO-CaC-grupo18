@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Agencia de Viajes CAC TURISMO">
@@ -11,12 +12,13 @@
     <link rel="shortcut icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--normaliza css -->
-    <link rel="stylesheet"href='css/normalize.css'>
+    <link rel="stylesheet" href='css/normalize.css'>
     <!--Iconos de bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header>
         <!--Menú -->
@@ -27,7 +29,7 @@
             <h2>CAC TURISMO</h2>
         </div>
         <button class="open-menu" id="open-menu"><i class="bi bi-list"></i></button>
-        <button class="close-menu disabled" id="close-menu"><i class="bi bi-x"></i></button> 
+        <button class="close-menu disabled" id="close-menu"><i class="bi bi-x"></i></button>
         <div class="mobile-menu disabled" id="mobile-menu">
             <nav class="mobile-menu__nav">
                 <ul>
@@ -63,7 +65,8 @@
                         <h3 class="topic">Cataratas del Iguazú</h3>
                         <p class="description">
                             <!-- Texto descriptivo -->
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt
+                            minima placeat.
                         </p>
                         <div class="buttons">
                             <button onclick="goPaq()">VER MÁS</button>
@@ -79,7 +82,8 @@
                         <h2 class="title">CAC TURISMO</h2>
                         <h3 class="topic">Norte Argentino</h3>
                         <p class="description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt
+                            minima placeat.
                         </p>
                         <div class="buttons">
                             <button onclick="goPaq()">VER MÁS</button>
@@ -95,7 +99,8 @@
                         <h2 class="title">CAC TURISMO</h2>
                         <h3 class="topic">Esquel</h3>
                         <p class="description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt
+                            minima placeat.
                         </p>
                         <div class="buttons">
                             <button onclick="goPaq()">VER MÁS</button>
@@ -111,7 +116,8 @@
                         <h2 class="title">CAC TURISMO</h2>
                         <h3 class="topic">San Rafael</h3>
                         <p class="description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt
+                            minima placeat.
                         </p>
                         <div class="buttons">
                             <button onclick="goPaq()">VER MÁS</button>
@@ -149,34 +155,35 @@
             </div>
             <!-- botones next prev -->
             <div class="hero__arrows">
-                <button id="prev"><</button>
-                <button id="next">></button>
+                <button id="prev">
+                    <</button>
+                        <button id="next">></button>
             </div>
         </section>
-<section id="paq">
-        <div class="paq_titulo">
-          <h2>Paquetes</h2>
-        </div>
-        <div class="paq_selec">
-          <h3>Mostrar salidas en:</h3>
-          <select name="meses" id="mes">
-            <option selected value="prox">Proximos Viajes...</option>
-            <option value="1">Enero</option>
-            <option value="2">Febrero</option>
-            <option value="3">Marzo</option>
-            <option value="4">Abril</option>
-            <option value="5">Mayo</option>
-            <option value="6">Junio</option>
-            <option value="7">Julio</option>
-            <option value="8">Agosto</option>
-            <option value="9">Septiembre</option>
-            <option value="10">Octubre</option>
-            <option value="11">Noviembre</option>
-            <option value="12">Diciembre</option>
-          </select>
-        </div>
-        <div class="paq_contenido">
-          <!-- <div class="paq_box">
+        <section id="paq">
+            <div class="paq_titulo">
+                <h2>Paquetes</h2>
+            </div>
+            <div class="paq_selec">
+                <h3>Mostrar salidas en:</h3>
+                <select name="meses" id="mes">
+                    <option selected value="prox">Proximos Viajes...</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+            </div>
+            <div class="paq_contenido">
+                <!-- <div class="paq_box">
         <img class="paq_portada" src="" alt=""/>
             <div class="paq_data">
                 <h3></h3>
@@ -190,28 +197,90 @@
                 </div>
             </div>
         </div >  -->
-        </div>
-      </section>
+            </div>
+        </section>
+        <section id="experiencias">
+            <h3>Experiencia de los Viajeros</h3>
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta-exp">
+                <div class="tarjeta-experiencia">
+                    <p><cite>"La ubicación está muy buena porque está cerca de la estación de tren. El desayuno completo
+                            y rico. El personal super amable. Está bueno que el estacionamiento esté al lado, no es del
+                            hotel pero lo atienden las mismas personas."</cite></p>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-adelante img1"></div>
+                    <div class="tarjeta-atras">
+                        <p>Micaela, 19 años </br> Argentina</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta-exp">
+                <div class="tarjeta-experiencia">
+                    <p><cite>"Hermoso hotel. Super pulcro. Cerca de las actividades de la ciudad. El personal muy
+                            atento. La habitación impecable. Te dan los accesorios necesarios para la estadía y lo mejor
+                            un dispenser de agua potable fría-caliente fundamental."</cite></p>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-adelante img2"></div>
+                    <div class="tarjeta-atras">
+                        <p>Camila, 25 años </br> Brasil</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta-exp">
+                <div class="tarjeta-experiencia">
+                    <p><cite>"Su principal ventaja es la vista desde la terraza donde se ve toda la ciudad. Tuvimos una
+                            habitación pequeña pero con ventana pegada a la cama que se veía muy bien. Es una buena
+                            relación calidad - precio."</cite></p>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-adelante img3"></div>
+                    <div class="tarjeta-atras">
+                        <p>Natasha, 30 años</br> España </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="tarjeta-exp">
+                <div class="tarjeta-experiencia">
+                    <p><cite>"Es ideal para viajeros que viajan solos. El personal y la mayoría de los huéspedes son muy
+                            sociables. Además el personal organiza actividades."</cite></p>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-adelante img4"></div>
+                    <div class="tarjeta-atras">
+                        <p>Paulo,24 años </br> Brasil</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <section class="contacto" id="contacto">
             <h3 class="contacto__titulo">Contacto</h3>
             <div class="contacto__content">
                 <div class="contacto__form">
-                    <form id="form" >
+                    <form id="form">
                         <p class="block">
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" required>
                         </p>
                         <p>
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" >
+                            <input type="email" id="email" name="email">
                         </p>
                         <p>
                             <label for="telefono">Teléfono:</label>
-                            <input type="tel" id="telefono" name="telefono" >
+                            <input type="tel" id="telefono" name="telefono">
                         </p>
                         <p class="block">
                             <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" ></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
                         </p>
                         <p class="contacto__respuesta block" id="respuesta">
                             <!-- ALERTA DE MENSAJES -->
@@ -228,19 +297,19 @@
                         <li><i class="bi bi-envelope-fill"></i> info@cacturismo.com</li>
                         <li><i class="bi bi-telephone-fill"></i> (011) 4999-9999</li>
                         <li><i class="bi bi-whatsapp"></i> (11) 4999-9998 (solo mensajes).</li>
-                    </ul>                    
+                    </ul>
                 </div>
             </div>
             <div class="contacto__mapa">
-                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=buenos%20aires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe width="600" height="500" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=buenos%20aires&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
         </section>
-
-        </section>
-
     </main>
     <script src="js/app.js"></script>
     <script src="js/contact.js"></script>
-  <script src="JS/main.js"></script>
+    <script src="JS/main.js"></script>
 </body>
+
 </html>
