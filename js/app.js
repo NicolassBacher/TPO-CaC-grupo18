@@ -51,7 +51,7 @@ function enableScroll() {
 //PAQUETES botones ver más
 //en etapa backend el botón RESERVAR se vinculará con app
 function goPaq() {
-    window.location.assign("#paquetes")
+    window.location.assign("#paq")
   }
 //FIN PAQUETES
 
