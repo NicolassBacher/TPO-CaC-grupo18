@@ -68,7 +68,7 @@ function armado(armar, datos) {
                 <hr class="paq_linea" />
                 <div class="paq_precio">
                     <h2></h2>
-                    <a href="#cont"><button class="paq_btn_info">+ info</button></a>
+                    <a href="#contacto"><button class="paq_btn_info">+ info</button></a>
                 </div>
             </div>
         </div > `
