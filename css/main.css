@@ -57,7 +57,7 @@ header{
     align-items: center;
 }
 
-.header__logo h2{
+.header__logo h1{
     color: var(--white);
     font-size: 1.3em;
     padding-left: .5rem;
