@@ -94,7 +94,7 @@ function armado(armar, datos) {
                     }
 
                 }
-                paq[1].src = `../images/${dato.imagen}`
+                paq[1].src = `./images/${dato.imagen}`
                 //paq[1].alt = dato.alt
                 paq[3].childNodes[1].innerHTML = dato.destino
                 paq[3].childNodes[3].innerHTML = '<img src="./images/calendario.png" alt="calendario"/>' + ' &nbsp' + tiempoDeViaje
