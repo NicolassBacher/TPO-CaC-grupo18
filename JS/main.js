@@ -20,7 +20,7 @@ let semana = {
 
 function validador(data) {
     viajesVigentes = []
-    Object.entries(data.viajes).forEach(([key, value]) => {
+    Object.entries(data).forEach(([key, value]) => {
 
         let salida = new Date(value.salida)
         if (salida > hoy && ((salida.getFullYear() == anioActual) || ((salida.getFullYear() == anioActual + 1) && (salida.getMonth() < mesActual)))) {
@@ -45,7 +45,7 @@ function arrayFiltro(viajes) {
         })
     } else {
         viajesVigentes.forEach((viajeVigente) => {
-            if (new Date(viajes.viajes[viajeVigente.id].salida).getMonth() + 1 == mes.value) {
+            if (new Date(viajes[viajeVigente.id].salida).getMonth() + 1 == mes.value) {
                 mostrar.push(viajeVigente.id)
             }
         })
@@ -68,22 +68,22 @@ function armado(armar, datos) {
                 <hr class="paq_linea" />
                 <div class="paq_precio">
                     <h2></h2>
-                    <a href="#contacto"><button class="paq_btn_info">+ info</button></a>
+                    <a href="#cont"><button class="paq_btn_info">+ info</button></a>
                 </div>
             </div>
-        </div >`
+        </div > `
         for (var i = 0; i < armar.length; i++) {
             contenido.innerHTML += box
         }
         let paquetes = document.querySelectorAll('.paq_box')
 
         armar.forEach((id, i) => {
-            let dato = datos.viajes[id]
+            let dato = datos[id]
             if (dato.salida != undefined) {
                 let paq = paquetes[i].childNodes
                 let salida = new Date(dato.salida)
                 let regreso = new Date(dato.regreso)
-                let tiempoDeViaje = ` ${dato.dias} dias ${dato.noches} noches <br>  &nbsp ${semana[salida.getDay()]} ${salida.getDate()}/${salida.getMonth() + 1
+                let tiempoDeViaje = ` ${dato.cantidad_dias} dias ${dato.cantidad_noches} noches <br>  &nbsp ${semana[salida.getDay()]} ${salida.getDate()}/${salida.getMonth() + 1
                     }/${salida.getFullYear()} al ${semana[regreso.getDay()]} ${regreso.getDate()}/${regreso.getMonth() + 1}/${regreso.getFullYear()}`
 
                 let transporte = (a) => {
@@ -94,9 +94,9 @@ function armado(armar, datos) {
                     }
 
                 }
-                paq[1].src = dato.img
-                paq[1].alt = dato.alt
-                paq[3].childNodes[1].innerHTML = dato.titulo
+                paq[1].src = `../images/${dato.imagen}`
+                //paq[1].alt = dato.alt
+                paq[3].childNodes[1].innerHTML = dato.destino
                 paq[3].childNodes[3].innerHTML = '<img src="./images/calendario.png" alt="calendario"/>' + ' &nbsp' + tiempoDeViaje
                 paq[3].childNodes[5].innerHTML = transporte(dato.transporte) + ' &nbsp ' + dato.transporte
                 paq[3].childNodes[7].innerHTML = dato.descripcion
@@ -105,12 +105,16 @@ function armado(armar, datos) {
         })
     }
 }
-console.log('cambie')
+
 async function cargarJSON() {
     try {
-        const response = await fetch("https://raw.githubusercontent.com/NicolassBacher/TPO-CaC-grupo18/main/JSON/viajes.json")
+        const response = await fetch("http://localhost:3000/viajes", {
+            //mode: 'no-cors',
+            method: "get",
+
+            //body: JSON.stringify(response)
+        })
         const viajes = await response.json()
-        viajess = viajes
         validador(viajes)
         arrayFiltro(viajes)
         armado(mostrar, viajes)
