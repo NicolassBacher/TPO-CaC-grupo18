@@ -108,7 +108,7 @@ function armado(armar, datos) {
 
 async function cargarJSON() {
     try {
-        const response = await fetch("http://localhost:3000/viajes", {
+        const response = await fetch("https://tpo-cac-backg18.vercel.app/viajes", {
             //mode: 'no-cors',
             method: "get",
 
