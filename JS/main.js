@@ -83,8 +83,8 @@ function armado(armar, datos) {
                 let paq = paquetes[i].childNodes
                 let salida = new Date(dato.salida)
                 let regreso = new Date(dato.regreso)
-                let tiempoDeViaje = ` ${dato.cantidad_dias} dias ${dato.cantidad_noches} noches <br>  &nbsp ${semana[salida.getDay()]} ${salida.getDate()}/${salida.getMonth() + 1
-                    }/${salida.getFullYear()} al ${semana[regreso.getDay()]} ${regreso.getDate()}/${regreso.getMonth() + 1}/${regreso.getFullYear()}`
+                let tiempoDeViaje = ` ${dato.cantidad_dias} dias ${dato.cantidad_noches} noches <br>  &nbsp ${semana[salida.getDay() + 1]} ${salida.getDate() + 1}/${salida.getMonth() + 1
+                    }/${salida.getFullYear()} al ${semana[regreso.getDay() + 1]} ${regreso.getDate() + 1}/${regreso.getMonth() + 1}/${regreso.getFullYear()}`
 
                 let transporte = (a) => {
                     if (a.toLowerCase() == 'aéreo' || a.toLowerCase() == 'aereo') {
