@@ -9,7 +9,7 @@ let viajesVigentes = []
 let viajess = {}
 let mostrar = []
 let semana = {
-    '0': 'Dom',
+    '7': 'Dom',
     '1': 'Lun',
     '2': 'Mar',
     '3': 'Mie',
